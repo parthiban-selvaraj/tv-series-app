@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+
+// Adding functional component
+const Link = (props) => (
+  <p>My first functional component</p>  
+)
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1 className='App-title'>TV Series List</h1>
+      </header>  
+      <Link />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -17,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      
     </div>
   );
 }
