@@ -28,7 +28,13 @@
   font-size: 1.5em;
 }
 
+.App-Intro {
+  color:black;
+}
+
 .App-link {
+  padding-top: 1em;
+  margin-top: 1%;
   color: #61dafb;
 }
 
