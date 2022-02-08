@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SeriesList from "../../components/SeriesList";
+import Loader from "../../components/Loader";
+import Intro from "../../components/Intro";
 
 class Series extends Component {
     // State - Javascript objects which react understands and renders by using their property
@@ -43,6 +45,8 @@ class Series extends Component {
         const { seriesName, seriesList, isFetching } = this.state;
         return (    
             <div>
+                {/* sending cutom property to functional components */}
+                <Intro message='Here you can find all of your most loved series' />
                 <div>
                     <input
                         value={ seriesName } 
@@ -51,18 +55,18 @@ class Series extends Component {
                 </div>
                 {/* validation for empty series name  */}
                 {
-                    seriesList.length === 0 && seriesName.trim() === '' 
+                    !isFetching && seriesList.length === 0 && seriesName.trim() === '' 
                     &&
                     <p>Please enter series name into the input field</p>
                 }
                 {/* validation for empty search result */}
                 {
-                    seriesList.length === 0 && seriesName.trim() !== ''
+                    !isFetching && seriesList.length === 0 && seriesName.trim() !== ''
                     &&
-                    <p>No results found with the {seriesName} name</p>
+                    <p>No results found with the <i>{seriesName}</i> name</p>
                 }
                 {
-                    isFetching && <p>Loading....</p>
+                    isFetching && <Loader />
                 }
                 {
                     !isFetching && <SeriesList message={seriesName} list={seriesList} /> 

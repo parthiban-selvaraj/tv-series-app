@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Intro from '../Intro';
-import Series from '../../containers/Series';
+// import Intro from '../Intro';
+// import Series from '../../containers/Series';
 import 'whatwg-fetch';
+import Main from '../Main';
 
 
 
@@ -14,19 +15,21 @@ class App extends Component {
         <header className="App-header">
           <h1 className='App-title'>TV Series List</h1>
         </header>
-        {/* sending cutom property to functional components */}
-        <Intro message='Here you can find all of your most loved series' />
+        
         {/* App is presentational component which receives API data from Series componet 
         which is container component */}
-        <Series /> 
-        <a
+        {/* <Series /> */}
+        
+        <Main /> 
+
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
 
       </div>
     );
