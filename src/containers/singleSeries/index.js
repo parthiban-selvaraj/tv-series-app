@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import Loader from "../../components/Loader";
+import SingleSeriesDisplay from "../../components/SingleSeriesDisplay";
 
 const SingleSeries = () =>  {
     // react hook for getting id from url
@@ -25,15 +26,7 @@ const SingleSeries = () =>  {
             {
                 show != null 
                 &&
-                <div>
-                    <p>Loaded the series <i>{show.name}</i></p>
-                    <p>Premiered - {show.premiered}</p>
-                    <p>Rating - {show.rating.average}</p>
-                    <p>Episodes - {show._embedded.episodes.length}</p>
-                    <p>
-                        <img alt="Show" src={show.image.medium} />
-                    </p>
-                </div>
+                <SingleSeriesDisplay list={show}/>
             }
         </div>
     )

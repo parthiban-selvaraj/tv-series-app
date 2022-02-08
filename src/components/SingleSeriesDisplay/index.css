@@ -1,0 +1,11 @@
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container {
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(41, 41, 41);
+    padding-top: 10px;
+    border-top: 2px solid rgb(41, 41, 41);
+}
