@@ -11,9 +11,10 @@ const SingleSeriesDisplay = (props) => {
                 <div>Episodes - {props.list._embedded.episodes.length}</div>
             </div>
 
-            <p>
-                <img alt="Show" src={props.list.image.original} />
-            </p>
+            <div class="container">
+                <img alt="Show" src={props.list.image.original} class="image"/>
+                <button class="btn">Play</button>
+            </div>
         </div>
     )
 }
